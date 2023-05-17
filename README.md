@@ -20,6 +20,13 @@ OBJ file format specification: https://en.wikipedia.org/wiki/Wavefront_.obj_file
 the microservice uses flask.request to request data. To request data, a user can upload <br />
 a file using the flask app. that is being done with flask.request in converter_micro.py<br />
 *click "upload" within the flask app<br />
+for HTTP request:<br />
+<br />
+url = 'http://localhost:5000/upload'<br />
+<br />
+file_path = './cube.stl' #replace with user file<br />
+files = {'file': open(file_path, 'rb')}<br />
+response = requests.post(url, files=files)<br />
 !---------------------------------------------------------------------------------------!<br />
 
 
